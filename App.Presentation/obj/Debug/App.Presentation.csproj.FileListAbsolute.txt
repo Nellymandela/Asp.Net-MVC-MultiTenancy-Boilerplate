@@ -1,0 +1,15 @@
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\App.Presentation.dll
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\App.Presentation.pdb
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\App.Core.dll
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\EntityFramework.dll
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\App.Core.pdb
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\App.Core.dll.config
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\EntityFramework.xml
+C:\Users\pc\source\repos\BService\App.Presentation\obj\Debug\App.Presentation.csprojAssemblyReference.cache
+C:\Users\pc\source\repos\BService\App.Presentation\obj\Debug\App.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\BService\App.Presentation\obj\Debug\App.Presentation.csproj.CopyComplete
+C:\Users\pc\source\repos\BService\App.Presentation\obj\Debug\App.Presentation.dll
+C:\Users\pc\source\repos\BService\App.Presentation\obj\Debug\App.Presentation.pdb
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\AutoMapper.dll
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\AutoMapper.pdb
+C:\Users\pc\source\repos\BService\App.Presentation\bin\Debug\AutoMapper.xml

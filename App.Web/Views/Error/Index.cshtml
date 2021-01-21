@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.PageTitle = "Not Found";
+}
+
+
+<html lang="en">
+<!--begin::Head-->
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.PageTitle</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    @Styles.Render("~/assets/metronic/css")
+
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed subheader-mobile-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+
+    <!--begin::Main-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Error-->
+        <div class="d-flex flex-row-fluid flex-column bgi-size-cover bgi-position-center bgi-no-repeat p-10 p-sm-30" style="background-color: white;">
+            <!--begin::Content-->
+            <h1 class="font-weight-boldest text-dark-75 mt-15" style="font-size: 10rem">Oops!</h1>
+            <p class="font-size-h3 text-muted font-weight-normal">
+                Something went wrong here.
+            </p>
+            <p class="font-size-h3 text-muted font-weight-normal">
+                We profusely apologize for the inconvenience and for any damage this may cause.
+            </p>
+            <!--end::Content-->
+        </div>
+        <!--end::Error-->
+    </div>
+    <!--end::Main-->
+
+    @Scripts.Render("~/assets/metronic/js")
+</body>
+<!--end::Body-->
+</html>

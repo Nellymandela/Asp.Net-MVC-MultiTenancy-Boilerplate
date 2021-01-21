@@ -1,0 +1,56 @@
+﻿@using App.Core.Models;
+@using System.Collections.Generic;
+@using System.Security.Claims;
+@model List<MenuViewModel>
+@{
+
+}
+
+@*@foreach (var menu in Model.Where(x => x.IsMenu))
+    {
+        if (!menu.IsPermission || menu.IsPermission && ((ClaimsPrincipal)User).HasClaim(x => x.Type == menu.Claim.Type))
+        {
+            var IsSubMenu = menu.childMenus.Any(x => x.IsMenu);
+            <li class="@string.Format("nav-item {0}", (IsSubMenu ? "nav-item-submenu" : string.Empty))">
+                <a href="@(string.IsNullOrEmpty(menu.Url) ? "#" : menu.Url)" class="nav-link"><i class="@(string.IsNullOrEmpty(menu.Icon) ? "icon-stack" : menu.Icon)"></i> <span>@menu.Name</span></a>
+                @if (IsSubMenu)
+                {
+                    <ul class="nav nav-group-sub" data-submenu-title="@menu.Name">
+                        @Html.Partial("~/Areas/Admin/Views/Shared/_Nav.cshtml", menu.childMenus)
+                    </ul>
+                }
+            </li>
+        }
+    }*@
+            @foreach (var menu in Model.Where(x => x.IsMenu))
+            {
+                if (!menu.IsPermission || menu.IsPermission && ((ClaimsPrincipal)User).HasClaim(x => x.Type == menu.Claim.Type))
+                {
+                    var IsSubMenu = menu.childMenus.Any(x => x.IsMenu);
+                    if (!IsSubMenu)
+                    {
+                        <li class="menu-item " aria-haspopup="true">
+                            <a href="@(string.IsNullOrEmpty(menu.Url) ? "#" : menu.Url)" class="menu-link ">
+                                <i class="menu-icon la @(string.IsNullOrEmpty(menu.Icon) ? "la-clone" : menu.Icon)"></i>
+                                <span class="menu-text">@menu.Name</span>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="menu-item  menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                            <a href="javascript:;" class="menu-link menu-toggle">
+                                <i class="menu-icon la @(string.IsNullOrEmpty(menu.Icon) ? "la-clone" : menu.Icon)"></i>
+                                <span class="menu-text">@menu.Name</span><i class="menu-arrow"></i>
+                            </a>
+                            <div class="menu-submenu ">
+                                <i class="menu-arrow"></i>
+                                <ul class="menu-subnav">
+                                    @Html.Partial("~/Areas/Admin/Views/Partial/_Nav.cshtml", menu.childMenus)
+                                </ul>
+                            </div>
+                        </li>
+                    }
+                }
+            }
+

@@ -1,0 +1,37 @@
+﻿@using App.Core.Models.Entities;
+@model RoleViewModel
+
+<div class="modal fade" id="create-modal" tabindex="-1" role="dialog" aria-labelledby="create-modal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create Role</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i aria-hidden="true" class="ki ki-close"></i>
+                </button>
+            </div>
+            @using (Html.BeginForm("Create", "Role", FormMethod.Post, new { areas = "Admin" }))
+            {
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Name<span class="text-danger">*</span></label>
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter role name", required = "required", type = "text" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+            @if (false)
+            {
+                <div class="form-group">
+                    <label>Color<span class="text-danger">*</span></label>
+                    @Html.EditorFor(model => model.Color, new { htmlAttributes = new { @class = "form-control", required = "required", type = "color" } })
+                    @Html.ValidationMessageFor(model => model.Color, "", new { @class = "text-danger" })
+                    <span class="form-text text-muted">This color identifies this role within the system.</span>
+                </div>
+            }
+        </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary btn-block btn-ladda ladda-button" data-style="zoom-in">Submit</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

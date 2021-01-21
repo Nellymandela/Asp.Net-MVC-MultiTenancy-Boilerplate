@@ -1,0 +1,57 @@
+﻿@using App.Core.Models;
+@model List<MenuViewModel>
+@{
+
+}
+
+@*@foreach (var menu in Model)
+    {
+        if (menu.IsPermission)
+        {
+            var permission = Model.Where(x => x.Claim.Type.Equals(menu.Claim.Type)).FirstOrDefault();
+            //if (permission != null && permission.ExistAsPermission)
+            if (permission != null)
+            {
+                //bool IsSelected = Pension.Application.Common.UserMenuStore.AllMenus.Any(x => x.Claim.Type.Equals(menu.Claim.Type));
+                <li>
+                    <p>
+                        <div class="form-check">
+                            <label for="permission-@menu.Claim.Type" class="form-check-label">
+                                <input type="checkbox" class="form-check-input-styled" id="permission-@menu.Claim.Type" name="@menu.Claim.Type" @(permission.IsActive ? "checked" : string.Empty) data-fouc />
+                                @menu.Name
+                            </label>
+                        </div>
+                        @if (menu.childMenus.Count > 0)
+                        {
+                            <ul style="list-style: none;">
+                                @Html.Partial("~/Areas/Admin/Views/Partial/Role/_RolePermissionSetup.cshtml", menu.childMenus)
+                            </ul>
+                        }
+                    </p>
+                </li>
+            }
+        }
+    }*@
+
+<div id="kt_tree_3" class="tree-demo jstree jstree-3 jstree-default jstree-checkbox-selection" role="tree" aria-multiselectable="true" tabindex="0" aria-activedescendant="j3_6" aria-busy="false">
+    <ul class="jstree-container-ul jstree-children jstree-wholerow-ul jstree-no-dots" role="group">
+        <li role="presentation" aria-selected="false" aria-level="1" aria-labelledby="j3_1_anchor" aria-expanded="true" id="j3_1" class="jstree-node  jstree-open">
+            <div unselectable="on" role="presentation" class="jstree-wholerow">&nbsp;</div>
+            <i class="jstree-icon jstree-ocl" role="presentation" aria-expanded="true"></i>
+            <a class="jstree-anchor" href="#" tabindex="-1" role="treeitem" aria-selected="false" aria-level="1" aria-expanded="false" id="j3_1_anchor">
+                <i class="jstree-icon jstree-checkbox jstree-undetermined" role="presentation"></i>
+                <i class="jstree-icon jstree-themeicon fa fa-folder text-warning jstree-themeicon-custom" role="presentation">
+                </i>Same but with checkboxes
+            </a>
+            <ul role="group" class="jstree-children">
+                <li role="presentation" aria-selected="true" aria-level="2" aria-labelledby="j3_2_anchor" id="j3_2" class="jstree-node  jstree-leaf">
+                    <div unselectable="on" role="presentation" class="jstree-wholerow jstree-wholerow-clicked">&nbsp;</div><i class="jstree-icon jstree-ocl" role="presentation">
+                    </i><a class="jstree-anchor jstree-clicked" href="#" tabindex="-1" role="treeitem" aria-selected="true" aria-level="2" id="j3_2_anchor">
+                        <i class="jstree-icon jstree-checkbox" role="presentation"></i>
+                        <i class="jstree-icon jstree-themeicon fa fa-folder text-warning jstree-themeicon-custom" role="presentation"></i>initially selected
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

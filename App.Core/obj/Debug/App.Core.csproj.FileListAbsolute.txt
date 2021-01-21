@@ -1,0 +1,15 @@
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\App.Core.dll
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\App.Core.pdb
+C:\Users\pc\source\repos\BService\App.Core\obj\Debug\App.Core.csproj.CoreCompileInputs.cache
+C:\Users\pc\source\repos\BService\App.Core\obj\Debug\App.Core.dll
+C:\Users\pc\source\repos\BService\App.Core\obj\Debug\App.Core.pdb
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\App.Core.dll.config
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\EntityFramework.dll
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\EntityFramework.xml
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pc\source\repos\BService\App.Core\obj\Debug\App.Core.csproj.CopyComplete
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\AutoMapper.dll
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\AutoMapper.pdb
+C:\Users\pc\source\repos\BService\App.Core\bin\Debug\AutoMapper.xml
+C:\Users\pc\source\repos\BService\App.Core\obj\Debug\App.Core.csprojAssemblyReference.cache
